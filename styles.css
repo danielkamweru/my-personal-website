@@ -1,0 +1,37 @@
+body {
+    background: blue;
+    text-align: center;
+}
+.links{
+    background-color: aqua;
+    padding:2rem;
+    justify-content: space-around;
+    border-radius: 1rem;
+    flex: auto;
+}
+.introduction {
+    background-color: aqua; 
+}
+#projects {
+text-align: center;
+padding : 3rem;
+}
+.btn-primary {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+}
+#About Me{
+padding: 30px;
+}
+.f {
+    text-align: center;
+    padding: 3rem;
+    background-color: yellowgreen
+}
+.photo {
+    border-radius: 100%;
+    width:300px;
+}
+
+
