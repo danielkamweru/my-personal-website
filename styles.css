@@ -30,8 +30,42 @@ padding: 30px;
     background-color: yellowgreen
 }
 .photo {
-    border-radius: 100%;
+    border-radius: 400%;
     width:300px;
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: aqua;
+    font-family: "Geologic",  sans-serif;
+}
+h1{
+    font-size:  3rem;
+}
+h1> span {
+    position:relative;
+    display: inline-block;
+    color: orange;
+    height: 1.5 rem;
+    vertical-align: bottom;
+    overflow: hidden;
+    
+}
+h1 > span > span {
+    display: block;
+    animation: animatewords 7s infinite ease;
+}
+@keyframes animatewords {
+    25% {transform: translateY(0%);}
+    25% {transform: translateY(-100%);}
+    50% {transform: translateY(-200%);}
+    75%  { transform: translateY(-300%);}
+    100% {transform: translateY(-400);}
 }
 
 
