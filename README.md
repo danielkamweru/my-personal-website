@@ -32,9 +32,6 @@ This is a simple yet attractive portfolio built using **HTML, CSS, and JavaScrip
 ├── script.js # JavaScript functionality
 ├── profile.jpg # Profile picture
 
-yaml
-Copy code
-
 ---
 
 ## 📸 Preview  
@@ -91,14 +88,6 @@ This is a simple yet attractive portfolio built using **HTML, CSS, and JavaScrip
 ├── styles.css # Styling file
 ├── script.js # JavaScript functionality
 ├── profile.jpg # Profile picture
-
-yaml
-Copy code
-
----
-
-## 📸 Preview  
-![Portfolio Screenshot](profile.jpg)
 
 ---
 
