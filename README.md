@@ -72,23 +72,6 @@ This is a simple yet attractive portfolio built using **HTML, CSS, and JavaScrip
 
 ---
 
-## 🚀 Technologies Used
-
-<p align="left">
-  <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5"/>
-  <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3"/>
-  <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"/>
-  <img src="https://img.icons8.com/ios-glyphs/48/000000/github.png" alt="GitHub"/>
-</p>
-
----
-
-## 📂 Project Structure
-├── index.html # Main HTML file
-├── styles.css # Styling file
-├── script.js # JavaScript functionality
-├── profile.jpg # Profile picture
-
 ---
 
 ## 💬 Comments & Feedback
