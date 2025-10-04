@@ -36,7 +36,7 @@ This is a simple yet attractive portfolio built using **HTML, CSS, and JavaScrip
 
 ## 📸 Preview  
 ![Portfolio Screenshot](profile.jpg) 
-This is a simple yet attractive portfolio built using **HTML, CSS, and JavaScript
+
 ## 💬 Comments & Feedback
 I’d love to hear your thoughts!  
 ⭐ Drop suggestions in the **Issues** tab of this repository.  
