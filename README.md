@@ -18,10 +18,10 @@ This is a simple yet attractive portfolio built using **HTML, CSS, and JavaScrip
 ## 🚀 Technologies Used
 
 <p align="left">
-  <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5"/>
-  <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3"/>
-  <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"/>
-  <img src="https://img.icons8.com/ios-glyphs/48/000000/github.png" alt="GitHub"/>
+  <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5"/>HTML
+  <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3"/>CSS
+  <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"/>JAVASCRIPT
+  <img src="https://img.icons8.com/ios-glyphs/48/000000/github.png" alt="GitHub"/>GITHUB
 </p>
 
 ---
@@ -50,7 +50,7 @@ I’d love to hear your thoughts!
 ---
 
 ## 📧 Contact Me
-📩 **Email:** [danielkamweru@example.com](mailto:danielkamweru@example.com)  
+📩 **Email:** [kamwerudaniel5@gmail.com]  
 
 ---
 
@@ -110,7 +110,7 @@ I’d love to hear your thoughts!
 ---
 
 ## 📧 Contact Me
-📩 **Email:** [danielkamweru@example.com](mailto:danielkamweru@example.com)  
+📩 **Email:** [kamwerudaniel5@gmail.com]
 
 ---
 
