@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>My Personal Website</title>
-        <div class="links">
-        <link rel="stylesheet" href="styles.css">
-        <button class="btn btn-primary">Welcome</button>
-        <div class="my-details">
-            <a href= "https://about.me/danielkamweru"> About</a>
-            <a href="https://www.strikingly.com/s/sites/33076924/edit?uid=63354d98-4dfa-904f-6e79-193480b9fb46">Contact</a>
-            <a href="https://www.veed.io/view/79816ee3-beb6-4a6f-982d-f74bfd133c01?source=editor&panel=share">Home</a>
-        </div>
-    </head>
-    <body>
-        <h1>Hello Viewer!</h1>
-        <script src="script.js"></script>
-        <header>I am Daniel Kamweru.</header>
-        <p> welcome to my personal portfolio!</p>
-        <img class=photo src="profile.jpg" alt="my photo" >
-    </div>
-        <header section class="introduction">
-            <h1> Iam am a software engineer.</h1>
-            <p>I started my software engineering course at Moringa school on 4th of August 2025.</p>
-            <div class="card">
-            <h1>
-                I'M A
-                <span>
-                    <span> CODER</span>
-                    <span>DEVELOPER</span>
-                    <span>PROGRAMMER</span>
-                </span>
-            </h1>
-            </div>
-            <section id="About Me">
-                <h2>What made me to do this course</h2>
-                <p>I am eager to learn more on software development  so that I can provide solutions to the problems facing the society. This include; agriculture and trading.</p>
-                <p> I am a passinate software developer learning full stack development.</p>
-            </section>
-            <section id="projects">
-                <h2>Projects</h2>
-                <h3> I have learned both Html and Css and I have done a project on them.</h3>
-                READMORE about me <p>Github:<a href="https:github.com/danielkamweru">danielkamweru</a></p>
-                <div class="dk dk-card">
-        <h1>DanielKamweru</h1>
-        <input type="text" class="dk-input"
-        placeholder="Username">
-        <input type="password" class="dk-input"
-        placeholder="Password">
-        <button class="dk-button">Sign In</button>
-    </div>
-                <footer class="f">copyright &copy; 2025 My website.All rights reserved</footer>
-                </section>
-            </section>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Kamweru | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Hello Viewer! 👋</h1>
+      <h2>I’m <span class="highlight">Daniel Kamweru</span></h2>
+      <button id="theme-toggle" class="theme-btn">
+        💡
+      </button>
+    </header>
+
+    <nav class="nav-bar">
+      <a href="https://about.me/danielkamweru">About</a>
+      <a href="https://www.strikingly.com/s/sites/33076924/edit?uid=63354d98-4dfa-904f-6e79-193480b9fb46">Contact</a>
+      <a href="https://www.veed.io/view/79816ee3-beb6-4a6f-982d-f74bfd133c01?source=editor&panel=share">Home</a>
+    </nav>
+
+    <section class="intro">
+      <h1 class="animate-text">
+        I'M A
+        <span class="role">
+          <span>CODER</span>
+          <span>DEVELOPER</span>
+          <span>PROGRAMMER</span>
+        </span>
+      </h1>
+      <p>Welcome to my personal portfolio!</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m passionate about software development and eager to create solutions
+        that solve real-world problems — especially in agriculture and trading.
+      </p>
+      <p>I’m currently studying Full Stack Development at Moringa School.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>I’ve completed several projects using HTML, CSS, and JavaScript.</p>
+      <img src="profile.jpg" alt="My photo" class="profile-photo" />
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="socials">
+        <a href="https://github.com/danielkamweru" class="social-link">🐱 GitHub</a>
+        <a href="https://www.linkedin.com/in/daniel-kamweru-528a40380" class="social-link">💼 LinkedIn</a>
+        <a href="https://x.com/@KamweruDan47536" target="_blank" class="social-link">🐦 X (Twitter)</a>
+        <a href="mailto:kamwerudaniel5@gmail.com" class="social-link">
+  📧 Email Me
+</a>
+
+      </div>
+    </section>
+
+    <section class="login-section">
+      <h2>Sign In</h2>
+      <input type="text" placeholder="Username" class="dk-input" />
+      <input type="password" placeholder="Password" class="dk-input" />
+      <button class="dk-button">Sign In</button>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 My Website. All rights reserved.
+    </footer>
+  </body>
 </html>
