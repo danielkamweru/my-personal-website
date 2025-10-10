@@ -75,13 +75,32 @@
 
       </div>
     </section>
+<section class="comment-section">
+  <h2>Leave a Comment 💬</h2>
+  <p>Write your feedback or message below — it will open directly in my WhatsApp chat!</p>
 
-    <section class="login-section">
-      <h2>Sign In</h2>
-      <input type="text" placeholder="Username" class="dk-input" />
-      <input type="password" placeholder="Password" class="dk-input" />
-      <button class="dk-button">Sign In</button>
-    </section>
+  <textarea id="comment" placeholder="Type your comment here..." class="dk-input" rows="4"></textarea>
+  <button class="dk-button" onclick="sendComment()">Send via WhatsApp</button>
+</section>
+
+<script>
+  function sendComment() {
+    const comment = document.getElementById("comment").value.trim();
+    if (comment === "") {
+      alert("Please type a comment first!");
+      return;
+    }
+
+    const phoneNumber = "254723832126"; // Your WhatsApp number
+    const encodedMessage = encodeURIComponent(`Hello Daniel! 👋\n\nHere’s my comment:\n"${comment}"`);
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp chat with pre-filled message
+    window.open(url, "_blank");
+  }
+</script>
+
+   
 
     <footer class="footer">
       &copy; 2025 My Website. All rights reserved.
