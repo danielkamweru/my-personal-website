@@ -5,105 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daniel Kamweru | Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="script.js"></script>
   </head>
 
   <body>
     <header class="header">
+      <div class="logo">DKW</div>
       <h1>Hello Viewer! 👋</h1>
-      <h2>I’m <span class="highlight">Daniel Kamweru</span></h2>
-      <button id="theme-toggle" class="theme-btn">
-        💡
-      </button>
+      <h2>I'm <span class="highlight">Daniel Kamweru</span></h2>
+      <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="light">☀️</button>
+        <button class="theme-btn" data-theme="dark">🌙</button>
+        <button class="theme-btn" data-theme="forest">🌲</button>
+        <button class="theme-btn" data-theme="sunshine">🌅</button>
+        <button class="theme-btn" data-theme="purple">🔮</button>
+      </div>
     </header>
 
     <nav class="nav-bar">
-      <a href="https://danielkamweru.github.io/my-typing-test-project/">View My Projects</a>
-      <a href="https://about.me/danielkamweru">About</a>
-      <a href="https://www.strikingly.com/s/sites/33076924/edit?uid=63354d98-4dfa-904f-6e79-193480b9fb46">Contact</a>
-      <a href="https://www.veed.io/view/79816ee3-beb6-4a6f-982d-f74bfd133c01?source=editor&panel=share">Home</a>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
-    <section class="intro">
-      <h1 class="animate-text">
-        I'M A
-        <span class="role">
-          <span>CODER</span>
-          <span>DEVELOPER</span>
-          <span>PROGRAMMER</span>
-        </span>
-      </h1>
-      <p>Welcome to my personal portfolio!</p>
-    </section>
+    <main>
+      <section id="home" class="section">
+        <h1 class="animate-text">
+          I'M A
+          <span class="role">
+            <span>CODER</span>
+            <span>DEVELOPER</span>
+            <span>PROGRAMMER</span>
+          </span>
+        </h1>
+        <p>Welcome to my personal portfolio!</p>
+        <div class="cta-buttons">
+          <a href="#projects" class="cta-button primary">View My Work</a>
+          <a href="#contact" class="cta-button secondary">Get In Touch</a>
+        </div>
+      </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I’m passionate about software development and eager to create solutions
-        that solve real-world problems — especially in agriculture and trading.
-      </p>
-      <p>I’m currently studying Full Stack Development at Moringa School.</p>
-    </section>
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>I'm passionate about software development and eager to create solutions that solve real-world problems — especially in agriculture and trading.</p>
+            <p>I'm currently studying Full Stack Development at Moringa School.</p>
+            <div class="about-details">
+              <div class="detail-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Full Stack Development Student</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-heart"></i>
+                <span>Passionate about modern Tech</span>
+              </div>
+            </div>
+          </div>
+          <div class="profile-container">
+            <img src="profile.jpg" alt="My photo" class="profile-photo" />
+          </div>
+        </div>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>I’ve completed several projects using HTML, CSS, and JavaScript.</p>
-      <img src="profile.jpg" alt="My photo" class="profile-photo" />
-    </section>
+      <section id="skills" class="section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h3>HTML</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+            <span class="skill-percentage">90%</span>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <h3>CSS</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+            <span class="skill-percentage">85%</span>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-js"></i>
+            </div>
+            <h3>JavaScript</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+            <span class="skill-percentage">80%</span>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-react"></i>
+            </div>
+            <h3>React</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+            <span class="skill-percentage">75%</span>
+          </div>
+        </div>
+      </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <div class="socials">
-        <a href="https://github.com/danielkamweru" class="social-link">🐱 GitHub</a>
-        <a href="https://www.linkedin.com/in/daniel-kamweru-528a40380" class="social-link">💼 LinkedIn</a>
-        <a href="https://x.com/@KamweruDan47536" target="_blank" class="social-link">🐦 X (Twitter)</a>
-<a href="https://wa.me/254723832126?text=Hello%20Daniel!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." 
-   target="_blank">
-  <svg xmlns="http://www.w3.org/2000/svg" 
-       width="24" height="24" 
-       viewBox="0 0 48 48">
-    <path fill="#25D366" d="M4.868 43.132l2.93-10.693a17.56 17.56 0 0 1-2.356-8.831C5.442 11.26 13.06 3.64 22.406 3.64c4.61 0 8.949 1.797 12.213 5.06a17.236 17.236 0 0 1 5.06 12.212c0 9.347-7.62 16.964-17.057 16.964a17.44 17.44 0 0 1-8.318-2.119l-9.436 2.375z"/>
-    <path fill="#FFF" d="M18.86 13.646c-.46-1.026-.945-1.046-1.384-1.066-.36-.016-.776-.015-1.192-.015s-1.096.157-1.674.776c-.578.618-2.2 2.148-2.2 5.238s2.253 6.07 2.57 6.489c.316.419 4.347 6.96 10.729 9.477 5.302 2.091 6.38 1.676 7.532 1.57 1.152-.105 3.717-1.518 4.24-2.982.524-1.465.524-2.719.366-2.982-.157-.263-.576-.42-1.192-.736-.617-.315-3.717-1.83-4.293-2.038-.577-.21-.997-.315-1.415.314-.419.63-1.622 2.037-1.988 2.455-.366.419-.732.472-1.349.157-.617-.315-2.607-.962-4.967-3.065-1.836-1.64-3.075-3.665-3.44-4.283-.366-.619-.04-.953.275-1.267.283-.283.63-.736.944-1.104.315-.367.419-.63.63-1.049.21-.419.105-.786-.053-1.101-.158-.315-1.382-3.448-1.935-4.702z"/>
-  </svg>
-</a>
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <p>I've completed several projects using HTML, CSS, and JavaScript.</p>
+        <div class="project-cards">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://picsum.photos/seed/typingtest/400/250.jpg" alt="Typing Test Project">
+            </div>
+            <div class="project-content">
+              <h3>Typing Test</h3>
+              <p>A web application to test and improve typing speed and accuracy.</p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <a href="https://danielkamweru.github.io/my-typing-test-project/" target="_blank" class="project-link">
+                View Project <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://picsum.photos/seed/groupproject/400/250.jpg" alt="Group Project">
+            </div>
+            <div class="project-content">
+              <h3>Phase 2 Group Project</h3>
+              <p>Collaborative project showcasing teamwork and development skills.</p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <a href="https://phase-2-group-project-swart.vercel.app" target="_blank" class="project-link">
+                View Project <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</a>
+      <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <div class="socials">
+          <a href="https://github.com/danielkamweru" target="_blank" class="social-link">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/daniel-kamweru-528a40380" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://x.com/@KamweruDan47536" target="_blank" class="social-link">
+            <i class="fab fa-x-twitter"></i> X (Twitter)
+          </a>
+          <a href="https://wa.me/254723832126?text=Hello%20Daniel!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." 
+             target="_blank" class="social-link">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="mailto:kamwerudaniel5@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </div>
+        
+        <div class="comment-section">
+          <h3>Leave a Comment 💬</h3>
+          <p>Write your feedback or message below — it will open directly in my WhatsApp chat!</p>
+          <textarea id="comment" placeholder="Type your comment here..." class="dk-input" rows="4"></textarea>
+          <button class="dk-button" onclick="sendComment()">Send via WhatsApp</button>
+        </div>
+      </section>
+    </main>
 
-        <a href="mailto:kamwerudaniel5@gmail.com" class="social-link">
-  📧 Email Me
-</a>
+    <button id="back-to-top" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
-      </div>
-    </section>
-<section class="comment-section">
-  <h2>Leave a Comment 💬</h2>
-  <p>Write your feedback or message below — it will open directly in my WhatsApp chat!</p>
-
-  <textarea id="comment" placeholder="Type your comment here..." class="dk-input" rows="4"></textarea>
-  <button class="dk-button" onclick="sendComment()">Send via WhatsApp</button>
-</section>
-
-<script>
-  function sendComment() {
-    const comment = document.getElementById("comment").value.trim();
-    if (comment === "") {
-      alert("Please type a comment first!");
-      return;
-    }
-
-    const phoneNumber = "254723832126"; // Your WhatsApp number
-    const encodedMessage = encodeURIComponent(`Hello Daniel! 👋\n\nHere’s my comment:\n"${comment}"`);
-    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    // Open WhatsApp chat with pre-filled message
-    window.open(url, "_blank");
-  }
-</script>
-
-   
+    <div class="navigation-dots">
+      <span class="dot active" data-section="home"></span>
+      <span class="dot" data-section="about"></span>
+      <span class="dot" data-section="skills"></span>
+      <span class="dot" data-section="projects"></span>
+      <span class="dot" data-section="contact"></span>
+    </div>
 
     <footer class="footer">
-      &copy; 2025 My Website. All rights reserved.
+      <p>&copy; 2025 Daniel Kamweru. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/danielkamweru" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/daniel-kamweru-528a40380" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/@KamweruDan47536" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://wa.me/254723832126" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:kamwerudaniel5@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
     </footer>
   </body>
 </html>
