@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // --- 1. THEME SWITCHING LOGIC ---
     
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    const currentTheme = 'dark'; // Always start with dark theme
     
     applyTheme(currentTheme);
     updateActiveThemeButton(currentTheme);
@@ -62,11 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function applyTheme(theme) {
-        document.body.classList.remove('theme-dark', 'theme-forest', 'theme-sunshine', 'theme-purple');
-        
-        if (theme !== 'light') {
-             document.body.classList.add(`theme-${theme}`);
-        }
+        document.body.classList.remove('theme-light', 'theme-dark', 'theme-forest', 'theme-sunshine', 'theme-purple');
+        document.body.classList.add(`theme-${theme}`);
     }
     
     function updateActiveThemeButton(theme) {
