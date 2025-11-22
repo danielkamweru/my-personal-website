@@ -421,7 +421,6 @@ p {
 .about-text {
     flex: 2;
 }
-*/
 .about-text-content .animated-text {
     min-height: 25px; 
 }
@@ -639,7 +638,7 @@ p {
     transform-style: preserve-3d;
 }
 
-.flip-card.flipped .f.flip-card.flipped .flip-card-inner {
+.flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
 
