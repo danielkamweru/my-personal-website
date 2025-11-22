@@ -803,7 +803,7 @@ p {
     padding: 10px 15px; /* Adjust padding for side-by-side display */
     font-size: 0.9em;
     transition: opacity 0.3s;
-    margin: 0; /* Remove margin from individual buttons inside the group */
+    margin: 0; 
 }
 
 .project-link:hover {
