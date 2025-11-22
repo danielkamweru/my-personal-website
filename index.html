@@ -410,21 +410,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Basic protection (can be bypassed by experienced users)
-        // This prevents right-click context menu from appearing on the page
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.addEventListener('keydown', e => {
-            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-                (e.ctrlKey && e.shiftKey && e.key === 'C') || (e.ctrlKey && e.key === 'u')) {
-                e.preventDefault();
-            }
-        });
-        
-        // Console warning
-        console.clear();
-        console.log('%cSTOP!', 'color: red; font-size: 50px; font-weight: bold;');
-        console.log('%cThis is a browser feature intended for developers. Code viewing is not permitted.', 'color: red; font-size: 16px;');
-    </script>
 </body>
 </html>
