@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import profileImage from './profile.jpg';
 
 const inlineCSS = `
 :root {
@@ -1287,7 +1286,7 @@ function App() {
                 
                 <div class="home-image">
                   <div class="developer-illustration">
-                    <img src="${profileImage}" alt="Daniel Kamweru - Software Engineer" class="engineer-photo">
+                    <img src="/profile.jpg" alt="Daniel Kamweru - Software Engineer" class="engineer-photo">
                   </div>
                 </div>
               </div>
