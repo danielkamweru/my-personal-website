@@ -2,7 +2,6 @@
 | 1. THEME VARIABLES 
 */
 :root {
-    /* DEFAULT (Dark) THEME */
     --color-bg-primary: #1e2433;
     --color-bg-secondary: #2c3447;
     --color-text-primary: #ecf0f1;
@@ -14,7 +13,6 @@
     --color-highlight-bg: #3498db;
 }
 
-/* LIGHT THEME */
 .theme-light {
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #f4f4f9;
@@ -27,7 +25,6 @@
     --color-highlight-bg: #ffeaa7;
 }
 
-/* DARK THEME */
 .theme-dark {
     --color-bg-primary: #1e2433;
     --color-bg-secondary: #2c3447;
@@ -40,7 +37,6 @@
     --color-highlight-bg: #3498db;
 }
 
-/* FOREST THEME */
 .theme-forest {
     --color-bg-primary: #213c2f;
     --color-bg-secondary: #2e4c3d;
@@ -53,7 +49,6 @@
     --color-highlight-bg: #457b9d;
 }
 
-/* SUNSHINE THEME */
 .theme-sunshine {
     --color-bg-primary: #fff8e1;
     --color-bg-secondary: #ffecb3;
@@ -65,7 +60,7 @@
     --color-shadow: rgba(255, 152, 0, 0.3);
     --color-highlight-bg: #ffcc80;
 }
-/* PURPLE THEME */
+
 .theme-purple {
     --color-bg-primary: #2d004d;
     --color-bg-secondary: #4a148c;
@@ -77,14 +72,13 @@
     --color-shadow: rgba(186, 104, 200, 0.2);
     --color-highlight-bg: #e1bee7;
 }
-/*
-| 2. BASE STYLES
-*/
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--color-bg-primary);
@@ -93,6 +87,7 @@ body {
     scroll-behavior: smooth;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
+
 .section {
     padding: 60px 5% 30px;
     min-height: 90vh;
@@ -105,7 +100,6 @@ body {
     min-height: auto;
 }
 
-/* NEW: Attractive Section Separator (uses pseudo-element to fill space) */
 .section::after {
     content: '';
     position: absolute;
@@ -115,7 +109,7 @@ body {
     pointer-events: none;
     border-top: 1px solid var(--color-shadow); 
 }
-/* Disable the divider on the last section and the Home section */
+
 #contact::after, #home::after {
     height: 0;
     border-top: none;
@@ -139,16 +133,13 @@ h2 {
     color: var(--color-accent-primary);
 }
 
-/* NEW: Better Typography for readability */
 p {
     color: var(--color-text-secondary);
     font-size: 1.05em; 
     max-width: 800px; 
     margin: 0 auto 15px; 
 }
-/*
-| 3. HEADER & NAVIGATION
-*/
+
 .header {
     background-color: var(--color-bg-secondary);
     color: var(--color-text-primary);
@@ -173,12 +164,14 @@ p {
     margin-bottom: 5px;
     color: var(--color-text-secondary);
 }
+
 .header h2 {
     font-size: 2em;
     margin-top: 0;
     margin-bottom: 15px;
     border-bottom: none;
 }
+
 .theme-switcher {
     position: absolute;
     top: 20px;
@@ -196,6 +189,7 @@ p {
     opacity: 0.6;
     transition: all 0.3s;
 }
+
 .theme-btn.active {
     opacity: 1;
     border-color: var(--color-accent-primary);
@@ -229,29 +223,18 @@ p {
     color: var(--color-bg-primary);
     background-color: var(--color-accent-primary);
 }
-/*
- 4. HOME SECTION
-*/
+
 #home {
     min-height: calc(100vh - 120px);
     padding: 0;
     position: relative;
     overflow: hidden;
 }
+
 .home-background {
     background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
     min-height: 100%;
     position: relative;
-}
-.home-background::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
 }
 
 .home-content {
@@ -277,7 +260,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .developer-illustration {
@@ -305,8 +287,6 @@ p {
     transform: scale(1.05);
 }
 
-
-
 .home-description {
     font-size: 1.2em;
     color: var(--color-text-secondary);
@@ -324,7 +304,6 @@ p {
     white-space: nowrap;
 }
 
-/* ENHANCED ANIMATED TEXT */
 .role {
     display: inline-flex;
     overflow: hidden;
@@ -333,8 +312,7 @@ p {
     vertical-align: middle;
     margin-left: 15px;
     border-right: 3px solid var(--color-accent-primary);
-    animation: 
-        blink-cursor 0.75s step-end infinite;
+    animation: blink-cursor 0.75s step-end infinite;
 }
 
 .role-words {
@@ -352,7 +330,6 @@ p {
     padding-right: 5px;
 }
 
-/* Keyframes */
 @keyframes word-slide {
     0%, 30% { transform: translateY(0); } 
     33%, 63% { transform: translateY(-58px); }
@@ -365,7 +342,6 @@ p {
     50% { border-color: var(--color-accent-primary); }
 }
 
-/* SMART & ATTRACTIVE CTA BUTTONS */
 .cta-button {
     text-decoration: none;
     padding: 12px 25px;
@@ -376,8 +352,6 @@ p {
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    
-    /* Default Primary Style */
     background-color: var(--color-accent-primary);
     color: var(--color-bg-primary);
     border: 2px solid var(--color-accent-primary);
@@ -391,7 +365,6 @@ p {
     border-color: #2980b9;
 }
 
-/* Optional: Secondary Style for distinction */
 .cta-button.secondary {
     background-color: var(--color-bg-primary);
     color: var(--color-accent-primary);
@@ -406,12 +379,6 @@ p {
     box-shadow: 0 4px 10px var(--color-shadow);
 }
 
-
-/*
-|--------------------------------------------------------------------------
-| 5. ABOUT SECTION
-|--------------------------------------------------------------------------
-*/
 .about-content {
     display: flex;
     gap: 50px;
@@ -421,36 +388,38 @@ p {
 .about-text {
     flex: 2;
 }
+
 .about-text-content .animated-text {
     min-height: 25px; 
 }
 
-
-/* ENHANCED: Floating Profile Photo Effect */
 .profile-container {
     flex: 1;
     text-align: center;
     position: relative;
     animation: float 4s ease-in-out infinite;
 }
+
 .profile-photo {
     width: 250px;
     border-radius: 50%;
     object-fit: cover;
-    /* ENHANCED BORDER/SHADOW */
     border: 8px double var(--color-accent-primary); 
     box-shadow: 0 10px 30px var(--color-shadow), 0 0 0 10px var(--color-bg-secondary); 
     transition: transform 0.3s;
 }
+
 .profile-photo:hover {
     transform: scale(1.05);
 }
+
 .about-details {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
     gap: 20px;
 }
+
 .detail-item {
     padding: 10px 15px;
     background-color: var(--color-bg-secondary);
@@ -459,16 +428,16 @@ p {
     display: flex;
     align-items: center;
 }
+
 .detail-item i {
     margin-right: 10px;
     color: var(--color-accent-secondary);
 }
+
 .download-cv {
     margin-top: 30px;
 }
-/*
- 6. SKILLS SECTION
-*/
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -482,15 +451,18 @@ p {
     box-shadow: 0 4px 10px var(--color-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .skill-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px var(--color-shadow);
 }
+
 .skill-icon i {
     font-size: 3em;
     color: var(--color-accent-primary);
     margin-bottom: 10px;
 }
+
 .skill-bar {
     background-color: var(--color-bg-secondary);
     height: 10px;
@@ -498,6 +470,7 @@ p {
     margin: 10px 0;
     overflow: hidden;
 }
+
 .skill-progress {
     height: 100%;
     background-color: var(--color-accent-secondary);
@@ -505,13 +478,12 @@ p {
     transition: width 1.5s ease-out;
     border-radius: 5px;
 }
+
 .skill-percentage {
     font-weight: 600;
     color: var(--color-accent-primary);
 }
-/*
-7. CAREER TIMELINE (UPDATED CONTENT)
-*/
+
 #timeline {
     background-color: var(--color-bg-secondary); 
     padding-bottom: 50px;
@@ -588,9 +560,7 @@ p {
     margin-right: 8px;
     margin-bottom: 5px;
 }
-/*
-8. LEARNING SECTION
-*/
+
 #learning {
     padding-bottom: 60px;
 }
@@ -622,7 +592,6 @@ p {
     margin-bottom: 10px;
 }
 
-/* Flip Card Styles */
 .flip-card {
     perspective: 1000px;
     height: 280px;
@@ -690,9 +659,7 @@ p {
     margin-top: 10px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
-/*
- 9. PROJECTS SECTION
-*/
+
 .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -705,6 +672,7 @@ p {
     position: relative;
     cursor: pointer;
 }
+
 .project-card-inner {
     position: relative;
     width: 100%;
@@ -713,14 +681,15 @@ p {
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
+
 .project-card:hover .project-card-inner {
     transform: rotateY(180deg);
 }
+
 .project-card-front, .project-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--color-shadow);
@@ -731,6 +700,7 @@ p {
     background-color: var(--color-card-bg);
     color: var(--color-text-primary);
 }
+
 .project-card-back {
     transform: rotateY(180deg);
     text-align: left;
@@ -739,14 +709,17 @@ p {
     justify-content: center;
     align-items: center;
 }
+
 .project-card-back h3 {
     color: var(--color-accent-primary);
     margin-bottom: 15px;
 }
+
 .project-card-back p {
     margin-bottom: 20px;
     text-align: center;
 }
+
 .project-image {
     width: 100%;
     height: 180px;
@@ -767,6 +740,7 @@ p {
 .project-image:hover img {
     transform: scale(1.05);
 }
+
 .project-tech .tech-tag {
     display: inline-block;
     background-color: var(--color-accent-secondary);
@@ -776,29 +750,29 @@ p {
     font-size: 0.8em;
     margin-right: 5px;
 }
+
 .project-links-group {
     display: flex;
-    flex-direction: row; /* Buttons side-by-side */
+    flex-direction: row;
     gap: 10px;
     margin-top: 15px;
     justify-content: center;
     width: 100%;
 }
+
 .project-link {
-    flex: 1; /* Distribute space equally */
+    flex: 1;
     text-align: center;
-    padding: 10px 15px; /* Adjust padding for side-by-side display */
+    padding: 10px 15px;
     font-size: 0.9em;
     transition: opacity 0.3s;
-    margin: 0; /* Remove margin from individual buttons inside the group */
+    margin: 0;
 }
 
 .project-link:hover {
     opacity: 0.9;
 }
-/*
-| 10. CONTACTS
-*/
+
 .socials {
     display: flex;
     flex-wrap: wrap;
@@ -867,7 +841,7 @@ p {
 }
 
 .dk-button {
-    background-color: #25d366; /* WhatsApp green */
+    background-color: #25d366;
     color: white;
     padding: 12px 30px;
     border: none;
@@ -881,9 +855,7 @@ p {
 .dk-button:hover {
     background-color: #1eaf53;
 }
-/*
-11. FOOTER 
-*/
+
 .footer {
     text-align: center;
     padding: 20px 5%;
@@ -903,7 +875,6 @@ p {
     color: var(--color-accent-primary);
 }
 
-/* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -932,7 +903,6 @@ p {
     transform: scale(1.1);
 }
 
-/* Navigation Dots */
 .navigation-dots {
     position: fixed;
     top: 50%;
@@ -960,7 +930,6 @@ p {
     opacity: 1;
 }
 
-/* Notification Pop-up */
 .notification {
     position: fixed;
     bottom: 50px;
@@ -981,9 +950,6 @@ p {
     transform: translateX(-50%) translateY(0);
 }
 
-/*
- 12. MEDIA QUERIES
-*/
 @media (max-width: 900px) {
     .section {
         padding: 40px 5% 20px;
@@ -1036,13 +1002,6 @@ p {
         width: 280px;
         height: 320px;
     }
-    
-    .code-overlay {
-        bottom: -15px;
-        right: -20px;
-        font-size: 10px;
-        padding: 10px;
-    }
 
     .animate-text {
         font-size: 2em;
@@ -1074,9 +1033,9 @@ p {
         flex-direction: column;
     }
 }
-/* Keyframes for floating profile photo */
+
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); } /* Move up by 10px */
+    50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
