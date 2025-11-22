@@ -2,16 +2,16 @@
 | 1. THEME VARIABLES 
 */
 :root {
-    /* DEFAULT (Light) THEME */
-    --color-bg-primary: #ffffff;
-    --color-bg-secondary: #f4f4f9;
-    --color-text-primary: #2c3e50;
-    --color-text-secondary: #5e738d;
-    --color-accent-primary: #3498db;
+    /* DEFAULT (Dark) THEME */
+    --color-bg-primary: #1e2433;
+    --color-bg-secondary: #2c3447;
+    --color-text-primary: #ecf0f1;
+    --color-text-secondary: #bdc3c7;
+    --color-accent-primary: #2ecc71;
     --color-accent-secondary: #e74c3c;
-    --color-card-bg: #ffffff;
-    --color-shadow: rgba(0, 0, 0, 0.1);
-    --color-highlight-bg: #ffeaa7;
+    --color-card-bg: #2c3447;
+    --color-shadow: rgba(255, 255, 255, 0.05);
+    --color-highlight-bg: #3498db;
 }
 
 /* LIGHT THEME */
@@ -92,18 +92,6 @@ body {
     line-height: 1.6;
     scroll-behavior: smooth;
     transition: background-color 0.4s ease, color 0.4s ease;
-}
-/* Apply dark theme by default */
-body {
-    --color-bg-primary: #1e2433;
-    --color-bg-secondary: #2c3447;
-    --color-text-primary: #ecf0f1;
-    --color-text-secondary: #bdc3c7;
-    --color-accent-primary: #2ecc71;
-    --color-accent-secondary: #e74c3c;
-    --color-card-bg: #2c3447;
-    --color-shadow: rgba(255, 255, 255, 0.05);
-    --color-highlight-bg: #3498db;
 }
 .section {
     padding: 60px 5% 30px;
