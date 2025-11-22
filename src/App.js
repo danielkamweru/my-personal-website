@@ -1286,7 +1286,7 @@ function App() {
                 
                 <div class="home-image">
                   <div class="developer-illustration">
-                    <img src="/profile.jpg" alt="Daniel Kamweru - Software Engineer" class="engineer-photo">
+                    <img src="${process.env.PUBLIC_URL}/profile.jpg" alt="Daniel Kamweru - Software Engineer" class="engineer-photo" onerror="this.src='https://via.placeholder.com/320x320/2ecc71/ffffff?text=DK';">
                   </div>
                 </div>
               </div>
