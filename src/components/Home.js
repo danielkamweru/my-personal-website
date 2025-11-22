@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImage from '../../public/profile.jpg';
 
 const Home = () => {
   return (
@@ -46,7 +47,7 @@ const Home = () => {
         
         <div className="home-image">
           <div className="developer-illustration">
-            <img src="profile.jpg" alt="Daniel Kamweru - Software Engineer" className="engineer-photo" />
+            <img src={profileImage} alt="Daniel Kamweru - Software Engineer" className="engineer-photo" />
           </div>
         </div>
       </div>
