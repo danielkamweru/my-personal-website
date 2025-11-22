@@ -1,0 +1,12 @@
+# Prevent direct access to CSS, JS, and image files
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Allow access only when requested by your HTML page
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif)$">
+    SetEnvIf Referer "^https://yourusername\.github\.io/your-repo-name" local_ref
+    Order Allow,Deny
+    Allow from env=local_ref
+</FilesMatch>
