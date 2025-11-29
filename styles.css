@@ -1,67 +1,49 @@
 :root {
-    --color-bg-primary: white;
-    --color-bg-secondary: lightgray;
-    --color-text-primary: darkslategray;
-    --color-text-secondary: slategray;
-    --color-accent-primary: dodgerblue;
-    --color-accent-secondary: crimson;
-    --color-card-bg: white;
-    --color-shadow: lightgray;
+    --color-bg-primary: #ffffff;
+    --color-text-primary: #333333;
+    --color-accent-primary: #007bff;
+    --color-card-bg: var(--color-bg-primary);
+    --color-shadow: #cccccc;
 }
 
 .theme-light {
-    --color-bg-primary: white;
-    --color-bg-secondary: lightgray;
-    --color-text-primary: darkslategray;
-    --color-text-secondary: slategray;
-    --color-accent-primary: dodgerblue;
-    --color-accent-secondary: crimson;
-    --color-card-bg: white;
-    --color-shadow: lightgray;
+    --color-bg-primary: #ffffff;
+    --color-text-primary: #333333;
+    --color-accent-primary: #007bff;
+    --color-card-bg: var(--color-bg-primary);
+    --color-shadow: #cccccc;
 }
 
 .theme-dark {
-    --color-bg-primary: darkslategray;
-    --color-bg-secondary: dimgray;
-    --color-text-primary: whitesmoke;
-    --color-text-secondary: lightgray;
-    --color-accent-primary: limegreen;
-    --color-accent-secondary: crimson;
-    --color-card-bg: dimgray;
-    --color-shadow: darkgray;
+    --color-bg-primary: #2c2c2c;
+    --color-text-primary: #ffffff;
+    --color-accent-primary: #00ff88;
+    --color-card-bg: var(--color-bg-primary);
+    --color-shadow: #555555;
 }
 
 .theme-forest {
-    --color-bg-primary: darkgreen;
-    --color-bg-secondary: forestgreen;
-    --color-text-primary: aliceblue;
-    --color-text-secondary: lightgreen;
-    --color-accent-primary: lightblue;
-    --color-accent-secondary: indianred;
-    --color-card-bg: forestgreen;
-    --color-shadow: gray;
+    --color-bg-primary: #0d4f0d;
+    --color-text-primary: #ffffff;
+    --color-accent-primary: #32cd32;
+    --color-card-bg: var(--color-bg-primary);
+    --color-shadow: #228b22;
 }
 
 .theme-sunshine {
-    --color-bg-primary: lightyellow;
-    --color-bg-secondary: gold;
-    --color-text-primary: darkgray;
-    --color-text-secondary: gray;
-    --color-accent-primary: orange;
-    --color-accent-secondary: darkred;
-    --color-card-bg: lightyellow;
-    --color-shadow: lightsalmon;
+    --color-bg-primary: #fff8dc;
+    --color-text-primary: #333333;
+    --color-accent-primary: #ffa500;
+    --color-card-bg: var(--color-bg-primary);
+    --color-shadow: #daa520;
 }
 
 .theme-purple {
-    --color-bg-primary: indigo;
-    --color-bg-secondary: purple;
-    --color-text-primary: lavender;
-    --color-text-secondary: plum;
-    --color-accent-primary: mediumorchid;
-    --color-accent-secondary: deeppink;
-    --color-card-bg: purple;
-    --color-shadow: thistle;
+    --color-bg-primary: #2e1a47;
+    --color-text-primary: #ffffff;
+    --color-accent-primary: #ba55d3;
+    --color-card-bg: var(--color-bg-primary);
+    --color-shadow: #6a5acd;
 }
 
 * {
@@ -85,7 +67,7 @@ body {
 }
 
 .header {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
     padding: 20px 5%;
     display: flex;
@@ -104,7 +86,7 @@ body {
 
 .theme-btn {
     background: var(--color-bg-primary);
-    border: 1px solid var(--color-text-secondary);
+    border: 1px solid var(--color-text-primary);
     border-radius: 50%;
     width: 35px;
     height: 35px;
@@ -129,7 +111,7 @@ body {
 }
 
 .nav-bar {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-primary);
     text-align: center;
     padding: 10px 0;
     position: sticky;
@@ -189,14 +171,14 @@ body {
 }
 
 .welcome-subtitle {
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     font-size: 1.1em;
     font-style: italic;
 }
 
 .intro-text {
     font-size: 1.2em;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     margin: 20px 0 30px;
     line-height: 1.6;
 }
@@ -279,7 +261,7 @@ h2 {
 }
 
 p {
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     font-size: 1.05em;
     max-width: 800px;
     margin: 0 auto 15px;
@@ -353,7 +335,7 @@ p {
 }
 
 .stat-label {
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     font-size: 0.9em;
     font-weight: 500;
 }
@@ -372,7 +354,7 @@ p {
 
 .detail-item {
     padding: 10px 15px;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-primary);
     border-left: 4px solid var(--color-accent-primary);
     border-radius: 4px;
     display: flex;
@@ -381,7 +363,7 @@ p {
 
 .detail-item i {
     margin-right: 10px;
-    color: var(--color-accent-secondary);
+    color: var(--color-accent-primary);
 }
 
 .download-cv {
@@ -414,7 +396,7 @@ p {
     object-fit: cover;
     object-position: center top;
     border: 8px double var(--color-accent-primary);
-    box-shadow: 0 10px 30px var(--color-shadow), 0 0 0 10px var(--color-bg-secondary);
+    box-shadow: 0 10px 30px var(--color-shadow), 0 0 0 10px var(--color-bg-primary);
     transition: transform 0.3s;
 }
 
@@ -448,7 +430,7 @@ p {
 }
 
 .skill-bar {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-primary);
     height: 10px;
     border-radius: 5px;
     margin: 10px 0;
@@ -457,7 +439,7 @@ p {
 
 .skill-progress {
     height: 100%;
-    background-color: var(--color-accent-secondary);
+    background-color: var(--color-accent-primary);
     width: 0;
     transition: width 1.5s ease-out;
     border-radius: 5px;
@@ -503,7 +485,7 @@ p {
 }
 
 .timeline-item.future::before {
-    background: var(--color-accent-secondary);
+    background: var(--color-accent-primary);
 }
 
 .timeline-date {
@@ -548,7 +530,7 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 10px var(--color-shadow);
     text-align: center;
-    border: 1px solid var(--color-text-secondary);
+    border: 1px solid var(--color-text-primary);
 }
 
 .learning-item i {
@@ -597,14 +579,14 @@ p {
 
 .flip-card-back {
     transform: rotateY(180deg);
-    background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
-    color: var(--color-bg-primary);
+    background-color: var(--color-card-bg);
+    color: var(--color-text-primary);
 }
 
 .flip-card-back h4 {
     font-size: 1.2em;
     margin-bottom: 12px;
-    color: #ffffff;
+    color: var(--color-text-primary);
     font-weight: 600;
 }
 
@@ -612,7 +594,7 @@ p {
     font-size: 0.9em;
     margin-bottom: 15px;
     line-height: 1.4;
-    color: #ffffff;
+    color: var(--color-text-primary);
     text-align: center;
     max-width: 95%;
     word-wrap: break-word;
@@ -680,7 +662,7 @@ p {
     overflow: hidden;
     border-radius: 8px;
     margin-bottom: 15px;
-    background: var(--color-bg-secondary);
+    background: var(--color-bg-primary);
 }
 
 .project-image img {
@@ -697,7 +679,7 @@ p {
 
 .project-tech .tech-tag {
     display: inline-block;
-    background-color: var(--color-accent-secondary);
+    background-color: var(--color-accent-primary);
     color: var(--color-bg-primary);
     padding: 5px 10px;
     border-radius: 5px;
@@ -750,7 +732,7 @@ p {
 }
 
 .comment-section h3 {
-    color: var(--color-accent-secondary);
+    color: var(--color-accent-primary);
     margin-bottom: 15px;
 }
 
@@ -758,7 +740,7 @@ p {
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid var(--color-text-secondary);
+    border: 1px solid var(--color-text-primary);
     border-radius: 5px;
     resize: vertical;
     font-size: 1em;
@@ -800,8 +782,8 @@ p {
 .footer {
     text-align: center;
     padding: 20px 5%;
-    background-color: var(--color-bg-secondary);
-    color: var(--color-text-secondary);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
     border-top: 1px solid var(--color-shadow);
 }
 

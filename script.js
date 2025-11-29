@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     body.classList.add(`theme-${savedTheme}`);
     document.querySelector(`[data-theme="${savedTheme}"]`).classList.add('active');
+    // Start typewriter effect immediately
+    setTimeout(startTypewriter, 1000); // Delay to allow DOM to settle
     
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-link');
