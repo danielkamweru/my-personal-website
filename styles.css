@@ -1,67 +1,67 @@
 :root {
-    --color-bg-primary: #ffffff;
-    --color-bg-secondary: #f4f4f9;
-    --color-text-primary: #2c3e50;
-    --color-text-secondary: #5e738d;
-    --color-accent-primary: #3498db;
-    --color-accent-secondary: #e74c3c;
-    --color-card-bg: #ffffff;
-    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-bg-primary: white;
+    --color-bg-secondary: lightgray;
+    --color-text-primary: darkslategray;
+    --color-text-secondary: slategray;
+    --color-accent-primary: dodgerblue;
+    --color-accent-secondary: crimson;
+    --color-card-bg: white;
+    --color-shadow: lightgray;
 }
 
 .theme-light {
-    --color-bg-primary: #ffffff;
-    --color-bg-secondary: #f4f4f9;
-    --color-text-primary: #2c3e50;
-    --color-text-secondary: #5e738d;
-    --color-accent-primary: #3498db;
-    --color-accent-secondary: #e74c3c;
-    --color-card-bg: #ffffff;
-    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-bg-primary: white;
+    --color-bg-secondary: lightgray;
+    --color-text-primary: darkslategray;
+    --color-text-secondary: slategray;
+    --color-accent-primary: dodgerblue;
+    --color-accent-secondary: crimson;
+    --color-card-bg: white;
+    --color-shadow: lightgray;
 }
 
 .theme-dark {
-    --color-bg-primary: #1e2433;
-    --color-bg-secondary: #2c3447;
-    --color-text-primary: #ecf0f1;
-    --color-text-secondary: #bdc3c7;
-    --color-accent-primary: #2ecc71;
-    --color-accent-secondary: #e74c3c;
-    --color-card-bg: #2c3447;
-    --color-shadow: rgba(255, 255, 255, 0.05);
+    --color-bg-primary: darkslategray;
+    --color-bg-secondary: dimgray;
+    --color-text-primary: whitesmoke;
+    --color-text-secondary: lightgray;
+    --color-accent-primary: limegreen;
+    --color-accent-secondary: crimson;
+    --color-card-bg: dimgray;
+    --color-shadow: darkgray;
 }
 
 .theme-forest {
-    --color-bg-primary: #213c2f;
-    --color-bg-secondary: #2e4c3d;
-    --color-text-primary: #f0f8ff;
-    --color-text-secondary: #b0c9bb;
-    --color-accent-primary: #a8dadc;
-    --color-accent-secondary: #e63946;
-    --color-card-bg: #2e4c4d;
-    --color-shadow: rgba(0, 0, 0, 0.2);
+    --color-bg-primary: darkgreen;
+    --color-bg-secondary: forestgreen;
+    --color-text-primary: aliceblue;
+    --color-text-secondary: lightgreen;
+    --color-accent-primary: lightblue;
+    --color-accent-secondary: indianred;
+    --color-card-bg: forestgreen;
+    --color-shadow: gray;
 }
 
 .theme-sunshine {
-    --color-bg-primary: #fff8e1;
-    --color-bg-secondary: #ffecb3;
-    --color-text-primary: #3d3d3d;
-    --color-text-secondary: #6d6d6d;
-    --color-accent-primary: #ff9800;
-    --color-accent-secondary: #d32f2f;
-    --color-card-bg: #fffde7;
-    --color-shadow: rgba(255, 152, 0, 0.3);
+    --color-bg-primary: lightyellow;
+    --color-bg-secondary: gold;
+    --color-text-primary: darkgray;
+    --color-text-secondary: gray;
+    --color-accent-primary: orange;
+    --color-accent-secondary: darkred;
+    --color-card-bg: lightyellow;
+    --color-shadow: lightsalmon;
 }
 
 .theme-purple {
-    --color-bg-primary: #2d004d;
-    --color-bg-secondary: #4a148c;
-    --color-text-primary: #f3e5f5;
-    --color-text-secondary: #ce93d8;
-    --color-accent-primary: #ba68c8;
-    --color-accent-secondary: #e91e63;
-    --color-card-bg: #4a148c;
-    --color-shadow: rgba(186, 104, 200, 0.2);
+    --color-bg-primary: indigo;
+    --color-bg-secondary: purple;
+    --color-text-primary: lavender;
+    --color-text-secondary: plum;
+    --color-accent-primary: mediumorchid;
+    --color-accent-secondary: deeppink;
+    --color-card-bg: purple;
+    --color-shadow: thistle;
 }
 
 * {
@@ -306,7 +306,7 @@ p {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(46, 204, 113, 0.3);
+    box-shadow: 0 6px 15px lightgreen;
 }
 
 .about-content {
