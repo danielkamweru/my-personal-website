@@ -1,18 +1,30 @@
+<!-- Document type declaration for HTML5 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Viewport meta tag for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title displayed in browser tab -->
     <title>Daniel Kamweru - Software Engineer</title>
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome icons library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts for Poppins font family -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header section with greeting and theme switcher -->
     <header class="header">
+        <!-- Logo/initials -->
         <div class="logo">DKW</div>
+        <!-- Main greeting heading -->
         <h1>Hello Viewer! 👋</h1>
+        <!-- Name with highlighted span -->
         <h2>I'm <span class="highlight">Daniel Kamweru</span></h2>
+        <!-- Theme switching buttons -->
         <div class="theme-switcher">
             <button class="theme-btn" data-theme="light">☀️</button>
             <button class="theme-btn active" data-theme="dark">🌙</button>
@@ -22,6 +34,7 @@
         </div>
     </header>
 
+    <!-- Navigation bar with links to different sections -->
     <nav class="nav-bar">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
@@ -32,18 +45,25 @@
         <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
+    <!-- Main content area -->
     <main>
+        <!-- Home section with introduction and profile -->
         <section id="home" class="section">
             <div class="home-content">
+                <!-- Welcome message -->
                 <div class="welcome-message">
                     <h3 class="welcome-text">Hello & Welcome!</h3>
                     <p class="welcome-subtitle">Thanks for visiting my digital space</p>
                 </div>
-                
+
+                <!-- Profile photo -->
                 <img src="profile.jpg" alt="Daniel Kamweru - Software Engineer" class="profile-photo">
+                <!-- Main name heading -->
                 <h1>I'm Daniel Kamweru</h1>
+                <!-- Introduction paragraph -->
                 <p class="intro-text">A passionate Full Stack Developer crafting digital solutions with creativity and determination</p>
-                
+
+                <!-- Key highlights with icons -->
                 <div class="intro-highlights">
                     <div class="highlight-item">
                         <i class="fas fa-code"></i>
@@ -58,7 +78,8 @@
                         <span>Modern Tech</span>
                     </div>
                 </div>
-                
+
+                <!-- Call-to-action buttons -->
                 <div class="cta-buttons">
                     <a href="#projects" class="cta-button">View My Work</a>
                     <a href="#contact" class="cta-button">Get In Touch</a>
@@ -66,24 +87,25 @@
             </div>
         </section>
 
+        <!-- About section with personal information and animated text -->
         <section id="about" class="section">
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
+                    <!-- Animated text content using typewriter effect -->
                     <div class="about-text-content">
-                        <p class="animated-text" data-text="Hello! I'm Daniel Kamweru, a passionate Full Stack Developer currently studying at Moringa School. My journey into technology began with a curiosity about how digital solutions can transform industries, particularly agriculture and trading sectors."></p>
-                        
-                        <p class="animated-text" data-text="What drives me is the belief that code should be more than just functional—it should be elegant, efficient, and purposeful. I approach every project with a problem-solving mindset, always asking: 'How can this make someone's life better or easier?'"></p>
-                        
-                        <p class="animated-text" data-text="My technical expertise spans across modern web technologies including HTML5, CSS3, JavaScript ES6+, and Python with Flask for robust backend systems. I'm also proficient in database management with SQL and deployment using platforms like Vercel."></p>
-                        
-                        <p class="animated-text" data-text="Beyond coding, I'm fascinated by the intersection of technology and real-world applications. I envision creating platforms that bridge the gap between traditional industries and modern digital solutions, especially in agricultural technology and financial trading systems."></p>
-                        
-                        <p class="animated-text" data-text="When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or brainstorming innovative solutions to everyday problems. I believe in continuous learning and staying updated with the latest industry trends and best practices."></p>
-                        
-                        <p class="animated-text" data-text="I'm actively seeking opportunities to apply my skills in real-world projects, whether through internships, collaborations, or junior developer positions. Let's connect and build something amazing together!"></p>
+                        <p class="animated-text" data-text="Hello! I'm Daniel Kamweru, a passionate Full Stack Developer currently studying at Moringa School. My journey into technology began with curiosity about how digital solutions can transform industries, particularly agriculture and trading."></p>
+
+                        <p class="animated-text" data-text="What drives me is creating elegant, efficient code that solves real problems. I approach every project with a problem-solving mindset, always asking how it can improve lives."></p>
+
+                        <p class="animated-text" data-text="My technical expertise includes HTML5, CSS3, JavaScript ES6+, Python with Flask, SQL databases, and deployment on platforms like Vercel."></p>
+
+                        <p class="animated-text" data-text="I'm fascinated by technology's intersection with real-world applications. I envision bridging traditional industries with modern digital solutions, especially in business, agriculture and technology"></p>
+
+                        <p class="animated-text" data-text="When not coding, I explore new technologies, contribute to open-source, and brainstorm solutions. I'm seeking internships or junior roles to apply my skills in real projects. Let's connect!"></p>
                     </div>
                     
+                    <!-- Statistics cards showing key metrics -->
                     <div class="about-stats">
                         <div class="stat-card">
                             <div class="stat-number">5+</div>
@@ -98,7 +120,8 @@
                             <div class="stat-label">Passion Driven</div>
                         </div>
                     </div>
-                    
+
+                    <!-- Detailed information items with icons -->
                     <div class="about-details">
                         <div class="detail-item">
                             <i class="fas fa-graduation-cap"></i>
@@ -125,7 +148,8 @@
                             <span>Always Learning, Always Growing</span>
                         </div>
                     </div>
-                    
+
+                    <!-- CV download and contact buttons -->
                     <div class="download-cv">
                         <a href="cv.pdf" download class="cta-button">
                             <i class="fas fa-download"></i> Download My CV
@@ -138,9 +162,12 @@
             </div>
         </section>
 
+        <!-- Skills section with progress bars -->
         <section id="skills" class="section">
             <h2>My Skills</h2>
+            <!-- Container for skill items -->
             <div class="skills-container">
+                <!-- Individual skill item with icon, title, progress bar -->
                 <div class="skill-item">
                     <div class="skill-icon"><i class="fab fa-html5"></i></div>
                     <h3>HTML</h3>
@@ -185,14 +212,18 @@
             </div>
         </section>
 
+        <!-- Timeline section showing career journey -->
         <section id="timeline" class="section">
             <h2>My Journey</h2>
+            <!-- Container for timeline items -->
             <div class="timeline-container">
+                <!-- Individual timeline entry -->
                 <div class="timeline-item">
                     <div class="timeline-date">Aug 2025 - Present</div>
                     <div class="timeline-content">
                         <h3>🎓 Full Stack Development at Moringa School</h3>
                         <p>Intensive bootcamp focusing on modern web technologies including HTML5, CSS3, JavaScript ES6+, Python, and Flask.</p>
+                        <!-- Skills learned during this period -->
                         <div class="timeline-skills">
                             <span class="skill-tag">JavaScript</span>
                             <span class="skill-tag">Python</span>
@@ -212,6 +243,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Future goals timeline item -->
                 <div class="timeline-item future">
                     <div class="timeline-date">2026+</div>
                     <div class="timeline-content">
@@ -223,16 +255,21 @@
             </div>
         </section>
 
+        <!-- Learning section with flip cards showing current technologies -->
         <section id="learning" class="section">
             <h2>Current Learning at Moringa 🧑💻</h2>
             <p>I am actively expanding my Full Stack capabilities with the following technologies:</p>
+            <!-- Container for learning flip cards -->
             <div class="learning-container">
+                <!-- Flip card for HTML5 -->
                 <div class="learning-item flip-card">
                     <div class="flip-card-inner">
+                        <!-- Front face of flip card -->
                         <div class="flip-card-front">
                             <i class="fab fa-html5"></i>
                             <h3>HTML5</h3>
                         </div>
+                        <!-- Back face of flip card -->
                         <div class="flip-card-back">
                             <h4>🏗️ Structure Master</h4>
                             <p>Building semantic, accessible web foundations with modern HTML5 elements.</p>
@@ -240,6 +277,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Flip card for CSS3 -->
                 <div class="learning-item flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -253,6 +291,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Flip card for JavaScript -->
                 <div class="learning-item flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -266,6 +305,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Flip card for React -->
                 <div class="learning-item flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -280,6 +320,7 @@
                     </div>
                 </div>
 
+                <!-- Flip card for Python -->
                 <div class="learning-item flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -293,6 +334,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Flip card for SQL -->
                 <div class="learning-item flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -306,6 +348,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Flip card for Vercel -->
                 <div class="learning-item flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -322,12 +365,16 @@
             </div>
         </section>
 
+        <!-- Projects section with flip cards -->
         <section id="projects" class="section">
             <h2>Sample Projects</h2>
             <p>Here are some sample projects showcasing my skills in web development. Hover over a card to see the details!</p>
+            <!-- Container for project flip cards -->
             <div class="project-cards">
+                <!-- Project flip card for Typing Test -->
                 <div class="project-card">
                     <div class="project-card-inner">
+                        <!-- Front face showing project overview -->
                         <div class="project-card-front">
                             <div class="project-image">
                                 <img src="https://picsum.photos/seed/typing/400/250.jpg" alt="Typing Test Project">
@@ -335,6 +382,7 @@
                             <div class="project-content">
                                 <h3>Typing Test</h3>
                                 <p>A web application to test and improve typing speed and accuracy.</p>
+                                <!-- Technology tags -->
                                 <div class="project-tech">
                                     <span class="tech-tag">HTML</span>
                                     <span class="tech-tag">CSS</span>
@@ -342,6 +390,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Back face with detailed description -->
                         <div class="project-card-back">
                             <h3>Typing Test Details ⌨️</h3>
                             <p>Real-time DOM manipulation and pure JavaScript event handling. Demonstrated proficiency in vanilla JavaScript logic and WPM calculation.</p>
@@ -349,6 +398,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Project flip card for Phase 2 React Project -->
                 <div class="project-card">
                     <div class="project-card-inner">
                         <div class="project-card-front">
@@ -375,8 +425,10 @@
             </div>
         </section>
 
+        <!-- Contact section with social links and comment form -->
         <section id="contact" class="section">
             <h2>Contact Me</h2>
+            <!-- Social media links -->
             <div class="socials">
                 <a href="https://github.com/danielkamweru" target="_blank" class="social-link">
                     <i class="fab fa-github"></i> GitHub
@@ -394,7 +446,8 @@
                     <i class="fas fa-envelope"></i> Email
                 </a>
             </div>
-            
+
+            <!-- Comment form that sends to WhatsApp -->
             <div class="comment-section">
                 <h3>Leave a Comment 💬</h3>
                 <p>Write your feedback or message below — it will open directly in my WhatsApp chat!</p>
@@ -406,10 +459,12 @@
         </section>
     </main>
 
+    <!-- Footer with copyright information -->
     <footer class="footer">
         <p>&copy; 2025 Daniel Kamweru. All rights reserved.</p>
     </footer>
 
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
