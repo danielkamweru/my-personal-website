@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing my journey as a Full Stack Dev
 
 Welcome to my digital space! I'm Daniel Kamweru, a passionate Full Stack Developer currently studying at Moringa School. This portfolio represents my journey in web development and showcases the projects I've built along the way.
 
-## 🚀 Live Demo
+##  Live Demo
 
 **[View Portfolio](https://danielkamweru.github.io/my-personal-website/)**
 
@@ -18,18 +18,18 @@ Welcome to my digital space! I'm Daniel Kamweru, a passionate Full Stack Develop
 - **Fonts:** Google Fonts (Poppins)
 - **Deployment:** GitHub Pages
 
-## 📋 Features
+##  Features
 
-- ✅ **Responsive Design** - Works seamlessly across all devices
-- ✅ **Interactive Animations** - Smooth transitions and hover effects
-- ✅ **Theme Switching** - Multiple color themes (Dark, Light, Forest, Sunshine, Purple)
-- ✅ **Flip Cards** - Interactive skill showcase cards
-- ✅ **Project Gallery** - Hover-to-reveal project details
-- ✅ **Contact Integration** - Direct WhatsApp messaging
-- ✅ **Smooth Scrolling** - Enhanced navigation experience
-- ✅ **Timeline View** - Visual journey representation
+-  **Responsive Design** - Works seamlessly across all devices
+- **Interactive Animations** - Smooth transitions and hover effects
+-  **Theme Switching** - Multiple color themes (Dark, Light, Forest, Sunshine, Purple)
+-  **Flip Cards** - Interactive skill showcase cards
+-  **Project Gallery** - Hover-to-reveal project details
+-  **Contact Integration** - Direct WhatsApp messaging
+- **Smooth Scrolling** - Enhanced navigation experience
+- **Timeline View** - Visual journey representation
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 my-personal-website/
@@ -41,7 +41,7 @@ my-personal-website/
 └── README.md          # Project documentation
 ```
 
-## 🎯 Sections
+## Sections
 
 1. **Home** - Introduction and profile overview
 2. **About** - Detailed background and passion
@@ -51,7 +51,7 @@ my-personal-website/
 6. **Projects** - Showcase of completed work
 7. **Contact** - Multiple ways to connect
 
-## 🔧 Local Development
+##  Local Development
 
 1. **Clone the repository:**
    ```bash
@@ -75,7 +75,7 @@ my-personal-website/
 - **Tablet:** 768px - 1199px
 - **Mobile:** Below 768px
 
-## 🎨 Color Themes
+## Color Themes
 
 - **Dark Theme** (Default) - Professional dark mode
 - **Light Theme** - Clean light interface
@@ -91,7 +91,7 @@ my-personal-website/
 - **Twitter:** [@KamweruDan47536](https://x.com/@KamweruDan47536)
 - **WhatsApp:** [Direct Message](https://wa.me/254723832126)
 
-## 📄 License
+##  License
 
 © 2025 Daniel Kamweru. All rights reserved.
 
