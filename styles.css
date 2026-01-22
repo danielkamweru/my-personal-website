@@ -664,9 +664,9 @@ p {
     transform-style: preserve-3d; /* Preserve 3D transformations */
 }
 
-/* Hover effect - flip the card */
-.project-card:hover .project-card-inner {
-    transform: rotateY(180deg); /* Flip around Y-axis on hover */
+/* Flipped state for click */
+.project-card.flipped .project-card-inner {
+    transform: rotateY(180deg); /* Flip around Y-axis when flipped */
 }
 
 /* Project card front and back faces - shared styles */
@@ -688,16 +688,61 @@ p {
 /* Back face specific styling */
 .project-card-back {
     transform: rotateY(180deg); /* Initially rotated 180 degrees */
-    text-align: left; /* Left align text */
+    text-align: center; /* Center align text to match front */
     display: flex; /* Flexbox for centering */
     flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Vertical center */
-    align-items: center; /* Horizontal center */
+    justify-content: space-between; /* Mirror front: content spaced with actions at bottom */
+    align-items: center; /* Center align content */
+    overflow-y: auto; /* Scroll if content overflows */
+    padding: 20px; /* Adjust padding */
+}
+
+.project-card-back ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card-back li {
+    margin-bottom: 5px;
+}
+
+/* Flip button styles */
+.flip-btn {
+    background-color: var(--color-accent-primary);
+    color: var(--color-bg-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.flip-btn:hover {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg-primary);
+}
+
+.flip-btn.back {
+    align-self: center;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .project-image {
     width: 100%;
-    height: 180px;
+    /* Maintain a consistent 16:9 aspect ratio instead of fixed height */
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -710,6 +755,7 @@ p {
     object-fit: cover;
     object-position: center;
     transition: transform 0.3s ease;
+    display: block; /* Remove default inline-gap below images */
 }
 
 .project-image:hover img {
