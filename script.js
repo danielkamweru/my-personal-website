@@ -1,4 +1,4 @@
-/* Main script - runs when DOM is fully loaded */
+
 document.addEventListener('DOMContentLoaded', function() {
     // Theme switching functionality
     const themeButtons = document.querySelectorAll('.theme-btn'); // Get all theme buttons
@@ -169,6 +169,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Flip project cards on button click
+    const flipButtons = document.querySelectorAll('.flip-btn');
+    flipButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const card = button.closest('.project-card');
+            card.classList.toggle('flipped');
+        });
+    });
+
     // Pause floating animation on profile photo hover
     const profilePhoto = document.querySelector('.profile-photo');
     if (profilePhoto) {
@@ -177,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         profilePhoto.addEventListener('mouseleave', function() {
-            this.style.animationPlayState = 'running'; // Resume animation
+            this.style.animationPlayState = 'running'; 
         });
     }
 
