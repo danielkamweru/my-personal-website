@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         profilePhoto.addEventListener('mouseleave', function() {
-            this.style.animationPlayState = 'running'; 
+            this.style.animationPlayState = 'running'; // Resume animation
         });
     }
 
