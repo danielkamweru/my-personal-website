@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeButtons = document.querySelectorAll('.theme-btn'); // Get all theme buttons
     const body = document.body; // Reference to body element
 
-    // Set default theme to dark
-    body.classList.add('theme-dark');
+    // Set default theme to purple
+    body.classList.add('theme-purple');
     
     // Add click event listeners to theme buttons
     themeButtons.forEach(button => {
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Load saved theme from localStorage or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    // Load saved theme from localStorage or default to purple
+    const savedTheme = localStorage.getItem('theme') || 'purple';
     body.classList.add(`theme-${savedTheme}`); // Apply saved theme
     document.querySelector(`[data-theme="${savedTheme}"]`).classList.add('active'); // Mark button as active
 

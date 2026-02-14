@@ -124,6 +124,25 @@ body {
     margin-bottom: 10px; /* Space below */
 }
 
+/* Social links styling */
+.social-links {
+    margin-bottom: 15px; /* Space below social links */
+}
+
+.social-link {
+    color: var(--color-text-primary); /* Dynamic text color */
+    font-size: 1.5em; /* Icon size */
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s ease; /* Smooth hover transition */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.social-link:hover {
+    color: var(--color-accent-primary); /* Accent color on hover */
+    opacity: 1; /* Full opacity on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
 /* Navigation bar */
 .nav-bar {
     background-color: var(--color-bg-primary); /* Dynamic background */
