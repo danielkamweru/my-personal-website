@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANIEL KAMWERU - CV</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background: white;
+        }
+        .header { 
+            text-align: center; 
+            border-bottom: 3px solid #2c3e50; 
+            padding-bottom: 20px; 
+            margin-bottom: 30px; 
+        }
+        .name { font-size: 2.8em; font-weight: bold; margin-bottom: 10px; }
+        .title { font-size: 1.6em; color: #555; margin-bottom: 15px; }
+        .contact { margin-bottom: 10px; font-size: 1.1em; }
+        .section { margin-bottom: 35px; }
+        .section-title { 
+            font-size: 1.4em; 
+            font-weight: bold; 
+            border-bottom: 2px solid #3498db; 
+            padding-bottom: 8px; 
+            margin-bottom: 20px; 
+            color: #2c3e50;
+        }
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            margin-bottom: 20px; 
+        }
+        .skill-category { 
+            font-weight: bold; 
+            color: #2c3e50; 
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .skill-list { 
+            background: #f8f9fa; 
+            padding: 12px; 
+            border-radius: 8px; 
+            border-left: 4px solid #3498db;
+        }
+        .project { 
+            margin-bottom: 25px; 
+            padding: 20px; 
+            background: #f8f9fa; 
+            border-radius: 8px; 
+            border-left: 4px solid #e74c3c;
+        }
+        .project-title { font-weight: bold; font-size: 1.2em; margin-bottom: 8px; color: #2c3e50; }
+        .tech-stack { 
+            background: #e8f4f8; 
+            padding: 8px 12px; 
+            border-radius: 4px; 
+            display: inline-block; 
+            margin: 8px 0; 
+            font-weight: 500;
+        }
+        .education-item, .referee-item { 
+            margin-bottom: 20px; 
+            padding: 15px; 
+            background: #f8f9fa; 
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+        }
+        .soft-skills { 
+            list-style-type: none; 
+            padding: 0; 
+        }
+        .soft-skills li { 
+            background: #e8f8f5; 
+            padding: 10px 15px; 
+            margin: 8px 0; 
+            border-radius: 5px;
+            border-left: 3px solid #27ae60;
+        }
+        .live-link { 
+            color: #2980b9; 
+            text-decoration: none; 
+            font-weight: 500;
+        }
+        .live-link:hover { text-decoration: underline; }
+        .summary-text { 
+            background: #f8f9fa; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-left: 4px solid #9b59b6;
+            font-size: 1.05em;
+        }
+        @media print {
+            body { padding: 10px; }
+            .header { border-bottom: 2px solid #333; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">DANIEL KAMWERU</div>
+        <div class="title"> Software Developer</div>
+        <div class="contact">Email: kamwerudaniel5@gmail.com | Phone: +254 723 832 126</div>
+        <div class="contact">
+            <a href="https://www.linkedin.com/in/daniel-kamweru-68670938b" target="_blank" style="color: #0077b5; text-decoration: none; font-weight: bold;">LinkedIn</a> | 
+            <a href="https://github.com/danielkamweru" target="_blank" style="color: #0077b5; text-decoration: none; font-weight: bold;">GitHub</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">PROFESSIONAL SUMMARY</div>
+        <div class="summary-text">
+            <p>Results-driven Junior Software Developer trained at Moringa School with strong full-stack development experience. Experienced in building scalable web platforms using React, JavaScript, Python, Flask, FastAPI, and modern databases. Passionate about clean architecture, API development, and creating user-focused digital solutions. Committed to continuous improvement and delivering value in collaborative agile environments.</p>
+            <br>
+            <p>Motivated Junior Software Developer currently training at Moringa School with a strong foundation in frontend and full-stack web development. Skilled in building responsive, user-focused applications using React and JavaScript. Passionate about technology, continuous learning, and solving real-world problems through clean, scalable code.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">EDUCATION</div>
+        <div class="education-item">
+            <div><strong>Software Development</strong></div>
+            <div><strong>Moringa School</strong></div>
+            <div>August 2025 – February 2026</div>
+            <p>Hands-on training in software engineering, frontend and backend development, APIs, and agile teamwork.</p>
+        </div>
+        <div class="education-item">
+            <div><strong>Kenya Certificate of Secondary Education (KCSE)</strong></div>
+            <div><strong>Baringo High School</strong></div>
+            <div>2021 – 2024</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">TECHNICAL SKILLS</div>
+        <div class="skills-grid">
+            <div>
+                <div class="skill-category">Frontend</div>
+                <div class="skill-list">HTML5, CSS3, JavaScript (ES6+), React, Tailwind CSS, Figma</div>
+            </div>
+            <div>
+                <div class="skill-category">Backend</div>
+                <div class="skill-list">Python, Flask, FastAPI, Node.js, RESTful APIs</div>
+            </div>
+            <div>
+                <div class="skill-category">Databases</div>
+                <div class="skill-list">PostgreSQL, SQLite, Firebase</div>
+            </div>
+            <div>
+                <div class="skill-category">Tools & Platforms</div>
+                <div class="skill-list">Git, GitHub, Postman, Thunder Client, Vite, VS Code, Figma, JSON</div>
+            </div>
+            <div>
+                <div class="skill-category">Deployment</div>
+                <div class="skill-list">Vercel, Render</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">TECHNICAL & PROFESSIONAL INTERESTS</div>
+        <div class="summary-text">
+            <p>Software Development & Web Technologies | UI/UX Design and Frontend Innovation | Artificial Intelligence & Machine Learning Fundamentals | Open-Source Contribution | Hackathons and Coding Challenges</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">PROJECTS</div>
+        <div class="project">
+            <div class="project-title">Project Tracker Web Application</div>
+            <div class="project-period">2021 – 2024</div>
+            <p>Collaborative task and project management system designed to improve workflow transparency and team productivity. Implemented reusable React components and responsive UI using Tailwind CSS.</p>
+            <div class="tech-stack">Tech Stack: React, JavaScript, HTML5, Tailwind CSS</div>
+            <div><a href="https://phase-2-group-project-swart.vercel.app" target="_blank" class="live-link">Live: https://phase-2-group-project-swart.vercel.app</a></div>
+        </div>
+        <div class="project">
+            <div class="project-title">Moringa TechHub Platform</div>
+            <p>Full-stack web platform built to showcase and manage technical content including software development resources, machine learning materials, and community-driven learning tools. Implemented backend APIs, authentication systems, and database integration with a modern responsive frontend.</p>
+            <div class="tech-stack">Tech Stack: React, Tailwind CSS, Python, FastAPI, PostgreSQL, Vercel, Render</div>
+            <div><a href="https://moringa-tech-hub-kappa.vercel.app" target="_blank" class="live-link">Live: https://moringa-tech-hub-kappa.vercel.app</a></div>
+        </div>
+        <div class="project">
+            <div class="project-title">Banking Application</div>
+            <p>An interactive web application for banking services and account management.</p>
+            <div class="tech-stack">Tech Stack: React, JavaScript</div>
+            <div><a href="https://daniel-david-banking-app-frontend.vercel.app/" target="_blank" class="live-link">Link: https://daniel-david-banking-app-frontend.vercel.app/</a></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">CERTIFICATIONS</div>
+        <div class="education-item">
+            <div><strong>Kenya Certificate of Secondary Education (KCSE) - Baringo High School</strong></div>
+        </div>
+        <div class="education-item">
+            <div><strong>Computer Technical Skills Trainee - Njoro Printers, Nakuru</strong></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">ADDITIONAL INFORMATION</div>
+        <div class="summary-text">
+            <p>Comfortable working in collaborative agile teams, using GitHub for version control and project management. Continuously improving skills through self-learning, coding practice, and real-world projects.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">SOFT SKILLS</div>
+        <ul class="soft-skills">
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Adaptability</li>
+            <li>Critical thinking</li>
+            <li>Problem-solving</li>
+            <li>Time management</li>
+            <li>Strong communication and collaboration skills</li>
+            <li>Problem-solving and analytical thinking</li>
+            <li>Adaptability and fast learning ability</li>
+            <li>Effective time management</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">REFEREE</div>
+        <div class="referee-item">
+            <div><strong>Albert Byrone</strong></div>
+            <div>Technical Mentor - Moringa School</div>
+            <div>Email: albert.byrone@moringaschool.com</div>
+        </div>
+    </div>
+</body>
+</html>
