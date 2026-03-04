@@ -326,13 +326,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Prepare email parameters with proper template structure
+            // Prepare email parameters with EmailJS expected format
             const templateParams = {
-                to_email: 'kamwerudaniel5@gmail.com', // Your email (recipient)
-                from_name: name, // Sender's name
-                from_email: email, // Sender's email
+                name: name, // Sender's name
+                email: email, // Sender's email  
                 subject: subject, // Email subject
                 message: message, // Email message
+                to_email: 'kamwerudaniel5@gmail.com', // Your email (recipient)
                 reply_to: email, // Reply-to address
                 website_name: 'Daniel Kamweru Portfolio',
                 timestamp: new Date().toLocaleString()
