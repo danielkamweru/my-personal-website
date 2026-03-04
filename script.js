@@ -299,13 +299,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             }
 
-            // Prepare email parameters
+            // Validate form data before sending
+            const name = formData.get('name')?.trim();
+            const email = formData.get('email')?.trim();
+            const subject = formData.get('subject')?.trim();
+            const message = formData.get('message')?.trim();
+
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                showNotification('Please fill in all fields.');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                }
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Please enter a valid email address.');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                }
+                return;
+            }
+
+            // Prepare email parameters with proper template structure
             const templateParams = {
-                email: formData.get('email'),
-                name: formData.get('name'),
-                subject: formData.get('subject'),
-                message: formData.get('message'),
-                reply_to: 'kamwerudaniel5@gmail.com'
+                to_email: 'kamwerudaniel5@gmail.com', // Your email (recipient)
+                from_name: name, // Sender's name
+                from_email: email, // Sender's email
+                subject: subject, // Email subject
+                message: message, // Email message
+                reply_to: email, // Reply-to address
+                website_name: 'Daniel Kamweru Portfolio',
+                timestamp: new Date().toLocaleString()
             };
 
             // Send email using EmailJS
