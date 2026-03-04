@@ -5,6 +5,10 @@
     --color-accent-primary: #007bff; /* Primary accent color */
     --color-card-bg: var(--color-bg-primary); /* Card background color */
     --color-shadow: #cccccc; /* Shadow color */
+    --color-form-bg: #f8f9fa; /* Form background color */
+    --color-input-border: #ddd; /* Input border color */
+    --color-success: #28a745; /* Success color */
+    --color-error: #dc3545; /* Error color */
 }
 
 /* Light theme colors */
@@ -934,5 +938,156 @@ p {
     .theme-switcher {
         top: 10px; /* Adjust position for mobile */
         right: 10px; /* Adjust position for mobile */
+    }
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: var(--color-card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--color-shadow);
+    margin: 20px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form h3 {
+    color: var(--color-text-primary);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-form p {
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea {
+    background: #ffffff;
+    border: 2px solid var(--color-input-border);
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #333333;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 0 3px rgba(186, 85, 211, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #555555 !important;
+    opacity: 1 !important;
+    font-weight: 500 !important;
+}
+
+/* Dark theme specific placeholder colors */
+.theme-dark .form-group input::placeholder,
+.theme-dark .form-group textarea::placeholder {
+    color: #666666 !important;
+}
+
+/* Forest theme specific placeholder colors */
+.theme-forest .form-group input::placeholder,
+.theme-forest .form-group textarea::placeholder {
+    color: #666666 !important;
+}
+
+/* Sunshine theme specific placeholder colors */
+.theme-sunshine .form-group input::placeholder,
+.theme-sunshine .form-group textarea::placeholder {
+    color: #555555 !important;
+}
+
+/* Purple theme specific placeholder colors */
+.theme-purple .form-group input::placeholder,
+.theme-purple .form-group textarea::placeholder {
+    color: #666666 !important;
+}
+
+.submit-btn {
+    background: var(--color-accent-primary);
+    color: var(--color-bg-primary);
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.form-status {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-status.success {
+    background: var(--color-success);
+    color: white;
+}
+
+.form-status.error {
+    background: var(--color-error);
+    color: white;
+}
+
+/* Mobile responsive for contact form */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    .submit-btn {
+        font-size: 14px;
+        padding: 12px 16px;
     }
 }

@@ -1,5 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS
+    (function() {
+        emailjs.init("qK3LWu2lxraRfkila"); // Your EmailJS public key
+    })();
+
     // Theme switching functionality
     const themeButtons = document.querySelectorAll('.theme-btn'); // Get all theme buttons
     const body = document.body; // Reference to body element
@@ -276,4 +281,68 @@ document.addEventListener('DOMContentLoaded', function() {
             if (sendButton) sendButton.disabled = false;
         }, 2000);
     };
+
+    // EmailJS contact form functionality
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const formData = new FormData(contactForm);
+
+            // Disable submit button during sending
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            }
+
+            // Prepare email parameters
+            const templateParams = {
+                email: formData.get('email'),
+                name: formData.get('name'),
+                subject: formData.get('subject'),
+                message: formData.get('message'),
+                reply_to: 'kamwerudaniel5@gmail.com'
+            };
+
+            // Send email using EmailJS
+            emailjs.send('service_ohepv9g', 'template_ggdhkrf', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    showNotification('Message sent successfully! I\'ll get back to you soon.');
+                    contactForm.reset();
+                    
+                    if (formStatus) {
+                        formStatus.textContent = '✅ Message sent successfully!';
+                        formStatus.className = 'form-status success';
+                        setTimeout(() => {
+                            formStatus.textContent = '';
+                            formStatus.className = 'form-status';
+                        }, 5000);
+                    }
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    showNotification('Failed to send message. Please try again or use WhatsApp.');
+                    
+                    if (formStatus) {
+                        formStatus.textContent = '❌ Failed to send. Please try again.';
+                        formStatus.className = 'form-status error';
+                        setTimeout(() => {
+                            formStatus.textContent = '';
+                            formStatus.className = 'form-status';
+                        }, 5000);
+                    }
+                })
+                .finally(function() {
+                    // Re-enable submit button
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    }
+                });
+        });
+    }
 });
