@@ -11,6 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
             navigator.serviceWorker.register('./sw.js')
                 .then((registration) => {
                     console.log('Service Worker registered with scope:', registration.scope);
+                    
+                    // Handle service worker updates
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                // New service worker is available, show update notification
+                                showNotification('🔄 App updated! Refresh for latest version.');
+                            }
+                        });
+                    });
                 })
                 .catch((error) => {
                     console.log('Service Worker registration failed:', error);
@@ -20,9 +31,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Handle PWA navigation - ensure proper routing
     window.addEventListener('load', () => {
+        console.log('PWA loaded, checking display mode');
+        
         // If running as PWA and no hash in URL, redirect to home
-        if (window.matchMedia('(display-mode: standalone)').matches && !window.location.hash) {
-            window.location.hash = '#home';
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            console.log('Running in standalone mode');
+            if (!window.location.hash) {
+                window.location.hash = '#home';
+            }
+        }
+        
+        // Handle any 404 scenarios
+        if (document.body.innerHTML.includes('404') || document.title.includes('404')) {
+            console.log('404 detected, redirecting to home');
+            window.location.replace('./#home');
+        }
+    });
+
+    // Add error handling for PWA navigation
+    window.addEventListener('error', (event) => {
+        console.error('PWA Error:', event.error);
+        if (event.message && event.message.includes('404')) {
+            window.location.replace('./#home');
+        }
+    });
+
+    // Add unhandled promise rejection handler
+    window.addEventListener('unhandledrejection', (event) => {
+        console.error('Unhandled promise rejection:', event.reason);
+        if (event.reason && event.reason.includes('404')) {
+            window.location.replace('./#home');
         }
     });
 

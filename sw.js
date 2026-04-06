@@ -1,11 +1,11 @@
 const CACHE_NAME = 'daniel-portfolio-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/script.js',
-  '/manifest.json',
-  '/profile.jpg',
+  './',
+  './index.html',
+  './styles.css',
+  './script.js',
+  './manifest.json',
+  './profile.jpg',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
   'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'
 ];
@@ -15,54 +15,12 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Opened cache');
+        console.log('Service Worker: Caching all files');
         return cache.addAll(urlsToCache);
       })
-  );
-});
-
-// Fetch event - handle all requests including navigation
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-
-        // Handle navigation requests - always serve index.html for SPA-like behavior
-        if (event.request.mode === 'navigate') {
-          return caches.match('/index.html').then((cachedResponse) => {
-            return cachedResponse || fetch('/index.html');
-          });
-        }
-
-        // Clone the request for other resources
-        const fetchRequest = event.request.clone();
-
-        return fetch(fetchRequest).then(
-          (response) => {
-            // Check if valid response
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Clone the response
-            const responseToCache = response.clone();
-
-            // Cache the response
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                cache.put(event.request, responseToCache);
-              });
-
-            return response;
-          }
-        ).catch(() => {
-          // If network fails, try to serve from cache
-          return caches.match(event.request);
-        });
+      .then(() => {
+        console.log('Service Worker: All files cached');
+        return self.skipWaiting();
       })
   );
 });
@@ -74,10 +32,87 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
+            console.log('Service Worker: Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
     })
+    .then(() => {
+      console.log('Service Worker: Activated');
+      return self.clients.claim();
+    })
   );
+});
+
+// Fetch event - handle all requests
+self.addEventListener('fetch', (event) => {
+  const request = event.request;
+  const url = new URL(request.url);
+  
+  // Handle navigation requests (HTML pages)
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      caches.match('./index.html')
+        .then((response) => {
+          if (response) {
+            console.log('Serving index.html from cache for navigation');
+            return response;
+          }
+          return fetch('./index.html').then((response) => {
+            if (!response.ok) {
+              throw new Error('Could not fetch index.html');
+            }
+            return response;
+          });
+        })
+        .catch(() => {
+          console.log('Network failed, serving index.html from cache');
+          return caches.match('./index.html');
+        })
+    );
+    return;
+  }
+  
+  // Handle other requests (CSS, JS, images, etc.)
+  event.respondWith(
+    caches.match(request)
+      .then((response) => {
+        // Return cached version if available
+        if (response) {
+          return response;
+        }
+        
+        // Try to fetch from network
+        return fetch(request)
+          .then((response) => {
+            // Check if we received a valid response
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+            
+            // Clone the response for caching
+            const responseToCache = response.clone();
+            
+            // Cache the response
+            caches.open(CACHE_NAME)
+              .then((cache) => {
+                cache.put(request, responseToCache);
+              });
+            
+            return response;
+          })
+          .catch(() => {
+            // If network fails, try to serve from cache
+            return caches.match(request);
+          });
+      })
+  );
+});
+
+// Handle message events for cache updates
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });

@@ -29,6 +29,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- PWA Fallback Script -->
+    <script>
+        // Immediate redirect for 404 scenarios
+        if (window.location.pathname !== '/' && window.location.pathname !== '/index.html' && !window.location.pathname.endsWith('.html')) {
+            console.log('Invalid path detected, redirecting to home');
+            window.location.replace('./#home');
+        }
+        
+        // Handle PWA startup
+        window.addEventListener('load', function() {
+            if (window.matchMedia('(display-mode: standalone)').matches) {
+                console.log('PWA mode detected');
+                if (!window.location.hash) {
+                    window.location.hash = '#home';
+                }
+            }
+        });
+    </script>
 </head>
 <body>
     <header class="header">
