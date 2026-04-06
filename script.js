@@ -282,6 +282,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     };
 
+    // Function to scroll to certificate download section
+    window.scrollToCertificate = function() {
+        const aboutSection = document.querySelector('#about');
+        const certificateButton = document.querySelector('a[href*="daniel-kamweru_certificate.pdf"]');
+        
+        if (aboutSection) {
+            // Smooth scroll to about section first
+            aboutSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // After scrolling, highlight the certificate button
+            setTimeout(() => {
+                if (certificateButton) {
+                    certificateButton.style.transform = 'scale(1.1)';
+                    certificateButton.style.boxShadow = '0 0 20px var(--color-accent-primary)';
+                    
+                    // Add pulse animation
+                    certificateButton.classList.add('pulse-animation');
+                    
+                    // Remove highlight after 3 seconds
+                    setTimeout(() => {
+                        certificateButton.style.transform = '';
+                        certificateButton.style.boxShadow = '';
+                        certificateButton.classList.remove('pulse-animation');
+                    }, 3000);
+                    
+                    showNotification('📄 Click the highlighted button to download my AI Certificate!');
+                }
+            }, 800);
+        }
+    };
+
     // EmailJS contact form functionality
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');

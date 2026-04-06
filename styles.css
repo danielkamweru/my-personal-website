@@ -47,6 +47,110 @@
     --color-shadow: #daa520;
 }
 
+/* AI Skills Section Styles */
+.ai-skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ai-skills-content {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ai-skills-text h3 {
+    color: var(--color-accent-primary);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ai-skills-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ai-skills-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.ai-skills-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.ai-skills-list li i {
+    margin-right: 15px;
+    color: var(--color-accent-primary);
+    font-size: 1.2rem;
+}
+
+.certificate-download-section {
+    background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-primary));
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 30px;
+}
+
+.certificate-download-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-download-section h4 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.certificate-download-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.certificate-download-btn {
+    background: white;
+    color: var(--color-accent-primary);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.certificate-download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design for AI Skills */
+@media (max-width: 768px) {
+    .ai-skills-text h3 {
+        font-size: 1.6rem;
+    }
+    
+    .certificate-download-section {
+        padding: 25px 20px;
+    }
+    
+    .certificate-download-section h4 {
+        font-size: 1.4rem;
+    }
+}
+
 /* Purple theme colors */
 .theme-purple {
     --color-bg-primary: #2e1a47;
