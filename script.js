@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Register Service Worker for PWA
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('./sw.js')
                 .then((registration) => {
                     console.log('Service Worker registered with scope:', registration.scope);
                 })
@@ -17,6 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     }
+
+    // Handle PWA navigation - ensure proper routing
+    window.addEventListener('load', () => {
+        // If running as PWA and no hash in URL, redirect to home
+        if (window.matchMedia('(display-mode: standalone)').matches && !window.location.hash) {
+            window.location.hash = '#home';
+        }
+    });
 
     // PWA Install functionality
     let deferredPrompt;

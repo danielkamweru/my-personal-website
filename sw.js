@@ -21,15 +21,49 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Fetch event - serve cached content when offline
+// Fetch event - handle all requests including navigation
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
-      }
-    )
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+
+        // Handle navigation requests - always serve index.html for SPA-like behavior
+        if (event.request.mode === 'navigate') {
+          return caches.match('/index.html').then((cachedResponse) => {
+            return cachedResponse || fetch('/index.html');
+          });
+        }
+
+        // Clone the request for other resources
+        const fetchRequest = event.request.clone();
+
+        return fetch(fetchRequest).then(
+          (response) => {
+            // Check if valid response
+            if(!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clone the response
+            const responseToCache = response.clone();
+
+            // Cache the response
+            caches.open(CACHE_NAME)
+              .then((cache) => {
+                cache.put(event.request, responseToCache);
+              });
+
+            return response;
+          }
+        ).catch(() => {
+          // If network fails, try to serve from cache
+          return caches.match(event.request);
+        });
+      })
   );
 });
 

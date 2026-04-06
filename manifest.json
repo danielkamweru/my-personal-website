@@ -2,12 +2,12 @@
   "name": "Daniel Kamweru - Software Engineer",
   "short_name": "Daniel Portfolio",
   "description": "Software Engineer Portfolio - Full Stack Developer specializing in React, Python, and AI",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#2e1a47",
   "theme_color": "#ba55d3",
   "orientation": "portrait-primary",
-  "scope": "/",
+  "scope": "./",
   "lang": "en",
   "icons": [
     {
@@ -29,14 +29,14 @@
       "name": "View Projects",
       "short_name": "Projects",
       "description": "View my latest projects",
-      "url": "/#projects",
+      "url": "./#projects",
       "icons": [{ "src": "profile.jpg", "sizes": "96x96" }]
     },
     {
       "name": "Contact Me",
       "short_name": "Contact",
       "description": "Get in touch with me",
-      "url": "/#contact",
+      "url": "./#contact",
       "icons": [{ "src": "profile.jpg", "sizes": "96x96" }]
     }
   ]
