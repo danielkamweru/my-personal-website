@@ -8,6 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page title displayed in browser tab -->
     <title>Daniel Kamweru - Software Engineer</title>
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#ba55d3">
+    <!-- Apple touch icon for iOS -->
+    <link rel="apple-touch-icon" href="profile.jpg">
+    <!-- PWA meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Daniel Portfolio">
+    <meta name="application-name" content="Daniel Portfolio">
+    <meta name="msapplication-TileColor" content="#ba55d3">
+    <meta name="msapplication-config" content="/browserconfig.xml">
     <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome icons library -->
@@ -25,6 +38,13 @@
         <h1>Hello Viewer! 👋</h1>
         <!-- Name with highlighted span -->
         <h2>I'm <span class="highlight">Daniel Kamweru</span></h2>
+        
+        <!-- PWA Install Button -->
+        <button id="install-btn" class="install-btn" style="display: none;">
+            <i class="fas fa-download"></i>
+            <span>Install App</span>
+        </button>
+        
         <!-- Theme switching buttons -->
         <div class="theme-switcher">
             <button class="theme-btn" data-theme="light">☀️</button>

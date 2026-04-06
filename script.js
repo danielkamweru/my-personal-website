@@ -5,6 +5,74 @@ document.addEventListener('DOMContentLoaded', function() {
         emailjs.init("qK3LWu2lxraRfkila"); // Your EmailJS public key
     })();
 
+    // Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch((error) => {
+                    console.log('Service Worker registration failed:', error);
+                });
+        });
+    }
+
+    // PWA Install functionality
+    let deferredPrompt;
+    const installBtn = document.getElementById('install-btn');
+
+    // Listen for beforeinstallprompt event
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        
+        // Show install button
+        if (installBtn) {
+            installBtn.style.display = 'inline-flex';
+        }
+    });
+
+    // Handle install button click
+    if (installBtn) {
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response to the install prompt: ${outcome}`);
+                
+                if (outcome === 'accepted') {
+                    showNotification('📱 App installed successfully!');
+                    installBtn.style.display = 'none';
+                } else {
+                    showNotification('App installation cancelled');
+                }
+                
+                deferredPrompt = null;
+            } else {
+                // Fallback for browsers that don't support beforeinstallprompt
+                showPWAInstallInstructions();
+            }
+        });
+    }
+
+    // Function to show install instructions for unsupported browsers
+    function showPWAInstallInstructions() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        let instructions = '';
+        
+        if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+            instructions = '📱 To install: Tap Share button, then "Add to Home Screen"';
+        } else if (userAgent.includes('android')) {
+            instructions = '📱 To install: Tap menu (3 dots), then "Install app" or "Add to Home screen"';
+        } else {
+            instructions = '📱 Look for "Install" or "Add to Home Screen" in your browser menu';
+        }
+        
+        showNotification(instructions);
+    }
+
     // Theme switching functionality
     const themeButtons = document.querySelectorAll('.theme-btn'); // Get all theme buttons
     const body = document.body; // Reference to body element

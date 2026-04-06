@@ -151,6 +151,79 @@
     }
 }
 
+/* Install Button Styles */
+.install-btn {
+    background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-primary));
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 15px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.install-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.install-btn:active {
+    transform: translateY(0);
+}
+
+.install-btn i {
+    font-size: 1rem;
+}
+
+.install-btn span {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Install button animation */
+.install-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.install-btn:hover::before {
+    left: 100%;
+}
+
+/* Responsive install button */
+@media (max-width: 768px) {
+    .install-btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+        margin: 10px 0;
+    }
+}
+
+/* Header adjustments for install button */
+.header {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background: var(--color-card-bg);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--color-shadow);
+    margin-bottom: 30px;
+}
+
 /* Purple theme colors */
 .theme-purple {
     --color-bg-primary: #2e1a47;
